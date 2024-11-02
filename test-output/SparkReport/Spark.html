@@ -1,0 +1,978 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Ahsan_Cucumber_Project</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Cucumber Test Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Nov 1, 2024 04:41:46 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Nov 1, 2024 04:41:46 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Nov 1, 2024 04:44:16 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>4</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>4</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>15</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>90</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Checkout feature":17.516,"HomePage feature":71.707,"Login feature":27.897,"Package feature":32.411
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>AppName</td>
+<td>Cucumber_Project</td>
+</tr>
+<tr>
+<td>user</td>
+<td>testUser</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 4,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 15,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 90,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Checkout feature</p>
+            <p class="text-sm">
+              <span>4:41:47 PM</span> / <span>00:00:17:516</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Checkout feature</h5>
+<span class='badge badge-success'>11.01.2024 4:41:47 PM</span>
+<span class='badge badge-danger'>11.01.2024 4:42:04 PM</span>
+<span class='badge badge-default'>00:00:17:516</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>User try to confirm order and checkout</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_is_on_the_home_page()">
+                <span>Given User is on the home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.CheckOutStep.user_hover_on_the_book_dropdown_menu()">
+                <span>When User hover on the book dropdown menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.CheckOutStep.user_hover_on_the_literature_poetry()">
+                <span>And User hover on the literature & poetry</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.CheckOutStep.user_is_to_select_the_uponnash()">
+                <span>And User is to select the uponnash</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.CheckOutStep.user_scroll_down_to_the_book()">
+                <span>And User scroll down to the book</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.CheckOutStep.user_click_on_the_selected_book()">
+                <span>And User click on the selected book</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.CheckOutStep.user_click_on_the_order_button()">
+                <span>And User click on the Order button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.CheckOutStep.user_enters_the_Name()">
+                <span>Then User enters the Name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.CheckOutStep.user_enters_mobile_number()">
+                <span>And User enters Mobile Number</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.CheckOutStep.user_inputs_delivery_address()">
+                <span>And User inputs Delivery Address</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.CheckOutStep.user_inputs_delivery_area()">
+                <span>And User inputs Delivery Area</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.CheckOutStep.user_click_on_the_confirm_order_button()">
+                <span>And User click on the Confirm Order button</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="17"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">HomePage feature</p>
+            <p class="text-sm">
+              <span>4:42:04 PM</span> / <span>00:01:11:707</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">HomePage feature</h5>
+<span class='badge badge-success'>11.01.2024 4:42:04 PM</span>
+<span class='badge badge-danger'>11.01.2024 4:43:16 PM</span>
+<span class='badge badge-default'>00:01:11:707</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="18"><span class="badge log pass-bg mr-2">Pass</span>User try to search the books</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_is_on_the_home_page()">
+                <span>Given User is on the home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_write_on_the_search_field()">
+                <span>When User write on the search field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_click_on_the_search_btn()">
+                <span>And User click on the searchBtn</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_select_the_book_from_search_list()">
+                <span>And User select the book from search list</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_view_the_selected_book_details()">
+                <span>Then User can view the selected book details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_see_the_reviews()">
+                <span>And User can see the reviews</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="27"><span class="badge log pass-bg mr-2">Pass</span>User try to view the Shopping Cart</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_is_on_the_home_page()">
+                <span>Given User is on the home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_click_on_the_shopping_cart_icon()">
+                <span>When User click on the Shopping Cart Icon</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_view_the_items_on_the_cart()">
+                <span>And User can view the items on the Cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_click_on_the_shopping_bag_from_cart()">
+                <span>And User click on the Shopping Bag from Cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_view_the_shopping_cart()">
+                <span>Then User can view the Shopping Cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_click_on_the_continue_to_shopping()">
+                <span>And User can click on the Continue to Shopping</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_scroll_down_to_hover()">
+                <span>And User scroll down to hover</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_hover_on_the_book()">
+                <span>And User hover on the book</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="38"><span class="badge log pass-bg mr-2">Pass</span>User try to cancel the Shopping Cart</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_is_on_the_home_page()">
+                <span>Given User is on the home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_click_on_the_shopping_cart_icon()">
+                <span>When User click on the Shopping Cart Icon</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_view_the_items_on_the_cart()">
+                <span>And User can view the items on the Cart</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_close_the_cart()">
+                <span>Then User can close the Cart</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="45"><span class="badge log pass-bg mr-2">Pass</span>User try to view the Wish List</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_is_on_the_home_page()">
+                <span>Given User is on the home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_click_on_the_wish_list_icon()">
+                <span>When User click on the WishList Icon</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_view_the_items_on_the_wish_list()">
+                <span>Then User can view the items on the WishList</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="51"><span class="badge log pass-bg mr-2">Pass</span>User try to check the Wish List</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_is_on_the_home_page()">
+                <span>Given User is on the home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_scroll_down_to_hover()">
+                <span>When User scroll down to hover</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_click_on_the_book()">
+                <span>And User click on the book</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_click_on_the_wish_list_icon_from_home()">
+                <span>And User click on the WishList Icon from home</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_check_icon()">
+                <span>Then User can check icon</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="59"><span class="badge log pass-bg mr-2">Pass</span>User try to Contact from footer</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_is_on_the_home_page()">
+                <span>Given User is on the home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_scroll_down_to_the_page()">
+                <span>When User scroll down to the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_click_on_the_contact_us_from_footer()">
+                <span>And User can click on the Contact Us from footer</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_view_the_contact_page()">
+                <span>Then User can view the Contact page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_input_name()">
+                <span>And User can input name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_input_email()">
+                <span>And User can input email</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_input_subject()">
+                <span>And User can input subject</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_input_speech()">
+                <span>And User can input speech</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.HomeStep.user_can_click_on_the_send_button()">
+                <span>And User can click on the send Button</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="71"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Login feature</p>
+            <p class="text-sm">
+              <span>4:43:16 PM</span> / <span>00:00:27:897</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Login feature</h5>
+<span class='badge badge-success'>11.01.2024 4:43:16 PM</span>
+<span class='badge badge-danger'>11.01.2024 4:43:44 PM</span>
+<span class='badge badge-default'>00:00:27:897</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=71</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="72"><span class="badge log pass-bg mr-2">Pass</span>User try to login with invalid credentials</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="73"><span class="badge log pass-bg mr-2">Pass</span>User try to login with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User input email "orin@gmail.com"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User input password "12345678"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on the login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User should see the error message "Login Failed! Please try again"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="81"><span class="badge log pass-bg mr-2">Pass</span>User try to login with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User input email "abc"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User input password "123456789"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on the login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User should see the error message "Login Failed! Please try again"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="89"><span class="badge log pass-bg mr-2">Pass</span>User try to login with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User input email "abc"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User input password "123"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on the login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User should see the error message "Login Failed! Please try again"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="97"><span class="badge log pass-bg mr-2">Pass</span>User try to login with invalid credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User input email " "</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User input password "123"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User click on the login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User should see the error message "Login Failed! Please try again"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="105"><span class="badge log pass-bg mr-2">Pass</span>User try to login with valid credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step_definitions.LoginStep.userIsOnTheLoginPage()">
+                <span>Given User is on the login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.LoginStep.user_input_email(java.lang.String)">
+                <span>When User input email "orin@gmail.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.LoginStep.user_input_password(java.lang.String)">
+                <span>And User input password "123456789"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.LoginStep.user_click_on_the_login_button()">
+                <span>And User click on the login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.LoginStep.user_successfully_logged_in()">
+                <span>Then User successfully logged in</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.LoginStep.user_should_see_the_my_account_page()">
+                <span>And User should see the my account page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="114"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Package feature</p>
+            <p class="text-sm">
+              <span>4:43:44 PM</span> / <span>00:00:32:411</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Package feature</h5>
+<span class='badge badge-success'>11.01.2024 4:43:44 PM</span>
+<span class='badge badge-danger'>11.01.2024 4:44:16 PM</span>
+<span class='badge badge-default'>00:00:32:411</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=114</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="115"><span class="badge log pass-bg mr-2">Pass</span>User try to view the Package Information</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_is_on_the_package_page()">
+                <span>Given User is on the package page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_select_the_book()">
+                <span>When User select the book</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_scroll_to_the_details()">
+                <span>And User scroll to the details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_view_the_book_details()">
+                <span>Then User view the book details</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="122"><span class="badge log pass-bg mr-2">Pass</span>User try to select Book Types</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_is_on_the_package_page()">
+                <span>Given User is on the package page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_click_on_the_check_box()">
+                <span>When User click on the BookTypes checkBox</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_click_on_the_selected_book_types()">
+                <span>And User click on the selected Book Types</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_select_any_book()">
+                <span>And User select any book</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_view_the_selected_book_details()">
+                <span>Then User view the selected book details</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="130"><span class="badge log pass-bg mr-2">Pass</span>User try to filter Authors & Category</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_is_on_the_package_page()">
+                <span>Given User is on the package page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_click_on_the_authors_check_box()">
+                <span>When User click on the Authors checkBox</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_click_on_the_selected_authors()">
+                <span>And User click on the selected Authors</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_view_the_selected_authors_details()">
+                <span>And User view the selected authors details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_click_on_the_categories_check_box()">
+                <span>And User click on the categories checkBox</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_click_on_the_package()">
+                <span>And User click on the package</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_select_the_package_book()">
+                <span>Then User select the packageBook</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="step_definitions.PackageStep.user_scroll_down_to_the_page_and_view_details()">
+                <span>And User scroll down to the page and view details</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
